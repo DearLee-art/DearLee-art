@@ -19,9 +19,9 @@
 
 ## 环境
 
-两个 skill 都用 `SKILL.md` 定义（Agent Skills 约定：YAML front matter + 使用手册），放进任意兼容宿主的 skills 目录即可被自动加载 —— WorkBuddy（`~/.workbuddy/skills/`）、Claude Code（`~/.claude/skills/`）或自建 agent 框架。
+两个 skill 都用 `SKILL.md` 定义（Agent Skills 约定：YAML front matter + 使用手册），放进宿主的 skills 目录即可被自动加载，不限定具体产品。
 
-TDX-read 本质是纯 Python 工具集，不装成 skill 也能用：clone 下来 `pip install pytdx` 即可直接跑脚本。数据源依赖 Windows 下的通达信客户端，其余纯 Python。
+不装成 skill 也不影响使用：TDX-read 是纯 Python 工具集，clone 下来 `pip install pytdx` 就能跑；cyf 是纯 Markdown，直接当手册读同样有效。数据源依赖 Windows 下的通达信客户端，其余纯 Python。
 
 ---
 
