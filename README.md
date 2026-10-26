@@ -8,7 +8,7 @@
 
 | 项目 | 是什么 | 关键点 |
 |---|---|---|
-| [**TDX-read**](https://github.com/DearLee-art/TDX-read) | 通达信本地数据读取工具集（WorkBuddy skill） | 12 个脚本，覆盖 K 线价量、前/后复权、584 字段财务、行业、板块、流通股本、技术指标、K 线图；除财务数据包下载外全离线 |
+| [**TDX-read**](https://github.com/DearLee-art/TDX-read) | 通达信本地数据读取工具集（纯 Python，附带可选 skill 包装） | 12 个脚本，覆盖 K 线价量、前/后复权、584 字段财务、行业、板块、流通股本、技术指标、K 线图；除财务数据包下载外全离线 |
 | [**BooktoUse**](https://github.com/DearLee-art/BooktoUse) | 读书 → skill，把方法论蒸馏成可执行手册 | 已收录「简简单单做股票·技术分析交易系统」（`cyf`），条件 → 动作 → 参数 → 止损 → 失效 五段式规则 |
 
 ## 两个项目的共同取舍
@@ -19,7 +19,9 @@
 
 ## 环境
 
-两个 skill 都以 `SKILL.md` 定义（front matter + 使用手册），装到 `~/.workbuddy/skills/` 即生效。数据读取层依赖 Windows 下的通达信客户端，其余纯 Python。
+两个 skill 都用 `SKILL.md` 定义（Agent Skills 约定：YAML front matter + 使用手册），放进任意兼容宿主的 skills 目录即可被自动加载 —— WorkBuddy（`~/.workbuddy/skills/`）、Claude Code（`~/.claude/skills/`）或自建 agent 框架。
+
+TDX-read 本质是纯 Python 工具集，不装成 skill 也能用：clone 下来 `pip install pytdx` 即可直接跑脚本。数据源依赖 Windows 下的通达信客户端，其余纯 Python。
 
 ---
 
